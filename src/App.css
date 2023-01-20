@@ -1,3 +1,123 @@
-.App {
+:root {
+    --background-image: url("./assets/background-photo_1.jpg");
+    --text: #1a202c;
+    --background-input: #f5f5f5;
+    --border-input: #4a5568;
+    --placeholder-input: #1a202c;
+    --background-details: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --background-image: url("./assets/background-photo_2.jpg");
+    --text: #f5f5f5;
+    --background-input: #2d3748;
+    --border-input: #4a5568;
+    --placeholder-input: #a0aec0;
+    --background-details: rgba(255, 255, 255, 0.1);
+}
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        var(--background-image);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--text);
+}
+
+.app .city-search {
     text-align: center;
+}
+
+.app .city-search input {
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    border: 1px solid var(--border-input);
+    border-radius: 1rem;
+    background-color: var(--background-details);
+    outline: none;
+    font-size: 1.5rem;
+    color: var(--text);
+}
+
+.app .city-search h4 {
+    color: var(--text);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 900px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 200px;
+    border-radius: 1rem;
+    background-color: var(--background-details);
+}
+
+.main > div {
+    flex: 1;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.extra-details {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 200px;
+    border-radius: 1rem;
+    background-color: var(--background-details);
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .extra-details {
+        flex-direction: column;
+    }
+
+    .extra-details > div {
+        width: 100%;
+        border-bottom: 1px solid #555;
+    }
+
+    .extra-details > div:last-child {
+        border: none;
+    }
+}
+
+.toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.toggle span {
+    color: var(--text);
+}
+
+.toggle-btn {
+    font-size: 2.5rem;
 }
